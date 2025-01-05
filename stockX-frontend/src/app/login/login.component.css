@@ -1,0 +1,302 @@
+.main-bd {
+    /* 
+    background: linear-gradient(135deg, #f0f8ff, #e0f7fa, #bbdefb);
+    height: 100vh;
+    padding: 20px;
+    
+    color: #333; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://crm-frontend.s3.eu-north-1.amazonaws.com/image/ulogin.jpg'); /* Replace with the path to your background image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+  }
+  
+  .login_logo {
+    width: 220px;
+    height: auto;
+    margin-bottom: 8px;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .card-body {
+    width: 100%;
+    max-width: 420px;
+    background: linear-gradient(135deg, #f8f1e5, #f3e0b5, #e0c89d);
+    /* background: rgba(135deg, ##b48250, #d4a373, 0.7); */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+  }
+  
+  .card-body:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #b48250, #d4a373, #e9c46a);
+    animation: gradientMove 3s infinite linear;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #007bff;
+    animation: slideIn 0.8s ease-out;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666; 
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #bbdefb;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #b48250;
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.4);
+  }
+  
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .btn {
+    width: 48%;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(90deg, #2196f3, #64b5f6);
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(90deg,  #b48250, #d4a373);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card-body {
+      padding: 30px 20px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .button-container {
+      flex-direction: column;
+    }
+  }
+  
+  
+  
+  .password-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%); /* Vertically center the icon */
+    cursor: pointer;
+    color: #007bff;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .password-toggle-icon:hover {
+    color: #b48250;
+  }
+  
+  .form-control {
+    position: relative;
+    padding-right: 40px; /* Add space for the eye icon */
+  }
+  
+  .form-control:focus + .toggle-password {
+    color: #2196f3; /* Change color when the input is focused */
+  }
+  
+  .forgot-password{
+    position: relative;
+    text-align: right;
+  }
+  
+  .forgot-password :hover{
+     color: #b48250;
+  }
+  
+  .register{
+    font-size: 20px;
+  }
+  
+  .register:hover{
+    color: #b48250;
+  }
+  .no-account p{
+    display: inline;
+  }
+  
+  
+  /* Popup Container */
+  .popup-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInOut 3s ease-in-out; /* Controls entry and exit animation */
+  }
+  
+  /* Popup Content */
+  .popup-content {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid;
+    font-size: 1rem;
+    min-width: 300px;
+    gap: 12px;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  /* Success and Error Styles */
+  .popup-content.success {
+    border-color: #28a745; /* Green border for success */
+    color: #28a745; /* Green text */
+  }
+  
+  .popup-content.error {
+    border-color: #dc3545; /* Red border for error */
+    color: #dc3545; /* Red text */
+  }
+  
+  /* Popup Icon */
+  .popup-icon i {
+    font-size: 1.5rem;
+  }
+  
+  /* Popup Message */
+  .popup-message p {
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+  }
+  
+  

@@ -1,0 +1,45 @@
+<div class="wrapper">
+    <!-- Header / Navbar -->
+    <header class="main-header d-flex align-items-center justify-content-between px-4">
+      <div class="d-flex align-items-center">
+        <!-- Sidebar Toggle Button -->
+        <button id="menu-btn" class="btn btn-outline-light d-md-none me-3" (click)="toggleSidebar()">
+          <i class="bi bi-list"></i>
+        </button>
+        <!-- Logo -->
+        <div class="logo-container me-3">
+          <img src="https://crm-frontend.s3.eu-north-1.amazonaws.com/image/cecw.png" alt="Logo" class="logo">
+        </div>
+        <!-- Navbar links -->
+        <nav class="d-none d-md-flex ms-4">
+          <a routerLink="userhome" class="nav-link fw-bold"><i class="bi bi-house-door"></i> Dashboard</a>
+          
+          <a routerLink="predict" class="nav-link fw-bold"><i class="bi bi-card-checklist"></i> Prediction</a>
+          <a routerLink="Settings" class="nav-link fw-bold"><i class="bi bi-person"></i> Settings</a>
+        </nav>
+      </div>
+  
+      <!-- Profile and Logout -->
+      <div class="d-flex align-items-center position-relative">
+        <a routerLink="/"><button class="btn btn-danger">Logout</button></a>
+      </div>
+    </header>
+  
+    <!-- Sidebar for small screens -->
+    <aside class="sidebar shadow" [class.active]="isSidebarActive" id="sidebar">
+      <nav class="nav flex-column mt-5 p-3">
+        <a routerLink="userhome" class="nav-link fw-bold"><i class="bi bi-house-door"></i> Home</a>
+        <a routerLink="suggestion" class="nav-link fw-bold"><i class="bi bi-lightbulb"></i> Suggestion Forum</a>
+        <a routerLink="mytickets" class="nav-link fw-bold"><i class="bi bi-card-checklist"></i> My Tickets</a>
+        <a routerLink="myprofile" class="nav-link fw-bold d-md-none"><i class="bi bi-person"></i> My Profile</a>
+      </nav>
+    </aside>
+  
+    <!-- Main Content -->
+    <div class="content pt-5">
+      <div class="container mt-5">
+        <!-- Routed components will appear here -->
+      </div>
+    </div>
+  </div>
+  
